@@ -1,4 +1,4 @@
-import bgImage from "./images/bg.jpg";
+import bgImage from "./images/nw-bg.jpg";
 
 export default function Parent({ children }) {
   return (
