@@ -1,3 +1,4 @@
+import Pupil from "./components/Pupil";
 import bgImage from "./images/nw-bg.jpg";
 
 export default function Parent({ children }) {
@@ -12,6 +13,7 @@ export default function Parent({ children }) {
         backgroundAttachment: "fixed",
       }}
     >
+      <Pupil/>
       {children}
     </div>
   );

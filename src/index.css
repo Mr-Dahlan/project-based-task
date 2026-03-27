@@ -9,6 +9,7 @@
 * {
   scrollbar-width: none;
 }
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -28,6 +29,7 @@ a {
   font-weight: 500;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -56,9 +58,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -69,10 +73,35 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
+}
+
+.hamim-path {
+  clip-path: polygon(0% 0%, 44% 0%, 45% 15%, 45% 35%, 55% 35%, 55% 15%, 56% 0%, 100% 0%, 100% 100%, 56% 100%, 55% 85%, 55% 65%, 45% 65%, 45% 85%, 44% 100%, 0% 100%);
+}
+
+.hamim-pupil {
+
+  clip-path: polygon(44.2% 0%, 45.5% 40%, 45.5% 77%, 54.5% 77%, 54.5% 40%, 55.7% 0%);
+  /* clip-path: ellipse(4% 30% at 50% 50%); */
+}
+
+@font-face {
+  font-family: 'Robotech GP';
+  src: url('./pages/Hamim/fonts/ROBOTECH\ GP.woff') format('woff');
+  font-weight:900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Class untuk menggunakan font tersebut */
+.hamim-font {
+  font-family: 'Robotech GP';
 }
