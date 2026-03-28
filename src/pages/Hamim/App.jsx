@@ -1,10 +1,29 @@
+import { useEffect, useRef } from "react";
+import Parent from "./Parent";
+import Main from "./hamimPages/Main";
+import Footer from "./hamimPages/Footer";
+import Back from "./components/Back.jsx"
+import Lenis from "lenis";
+
+
 export default function HamimApp() {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline text-red-600">
-        Halaman Hamim
-      </h1>
-      <p>Ini bagian saya</p>
+    <div className="min-w-screen min-h-screen">
+      <Parent>
+	<Back/>
+        <Main/>
+        <Footer/>
+      </Parent>
     </div>
   );
 }
