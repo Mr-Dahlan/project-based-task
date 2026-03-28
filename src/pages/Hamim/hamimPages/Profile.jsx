@@ -10,8 +10,8 @@ export default function Profile() {
   ];
 
   return (
-    <div className="w-full h-auto mt-20 flex flex-col justify-between items-center py-20 ">
-      <div className="w-full h-full flex flex-col items-center bg-black/70 rounded-xl p-4">
+    <div id="Profile" className="w-full h-auto mt-20 flex flex-col justify-between items-center py-30">
+      <div className="w-full h-full flex flex-col items-center bg-black/70 rounded-xl p-4 ">
         <h2 className="hamim-font text-4xl mb-2">Biografi</h2>
         <div className="flex flex-row justify-between items-center w-full mb-4">
           <img

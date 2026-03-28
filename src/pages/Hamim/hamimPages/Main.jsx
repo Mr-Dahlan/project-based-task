@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Profile from "./Profile";
 import Galery from "./Galery";
+import Expert from "./Expert";
+import CallMe from "./CallMe";
 import TextType from "../components/TextType";
-import DecryptedText from "../components/DecryptedText";
 
 export default function Main() {
   const [word, setWord] = useState("Hamim G. Dahlan");
@@ -30,7 +31,7 @@ export default function Main() {
           WELCOME
         </span>
 
-        <p className="text-white mt-4 text-center mb-[24%]">
+        <div className="text-white mt-4 text-center mb-[24%]">
           Who is
           <TextType
             text={[
@@ -38,26 +39,25 @@ export default function Main() {
               " The Best Engineer",
               " The Most Genius Man",
               " The Next Tony Stark",
+              " Not Vibe Coder",
             ]}
             typingSpeed={75}
             pauseDuration={1500}
             showCursor
             cursorCharacter="|"
-            texts={[
-              "Welcome to React Bits! Good to see you!",
-              "Build some amazing experiences!",
-            ]}
             deletingSpeed={50}
             variableSpeedEnabled={false}
             variableSpeedMin={60}
             variableSpeedMax={120}
             cursorBlinkDuration={0.5}
           />
-        </p>
+        </div>
 
         <Navbar />
         <Profile />
         <Galery />
+        <Expert/>
+        <CallMe/>
       </div>
     </main>
   );
