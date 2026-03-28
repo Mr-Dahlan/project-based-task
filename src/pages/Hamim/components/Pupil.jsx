@@ -22,7 +22,7 @@ export default function Pupil() {
 
     return (
         <div 
-            className="hamim-pupil fixed w-full h-10 bg-white/40 rounded-md top-0 cursor-pointer"
+            className="hamim-pupil fixed w-full h-10 bg-black/70 rounded-md top-0 cursor-pointer"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Logo from "../images/logo.png"
+import DecryptedText from "./DecryptedText";
 
 export default function Navbar() {
   const [position, setPosition] = useState(false);
@@ -20,10 +21,10 @@ export default function Navbar() {
   return (
     <nav
       id="navbar"
-      className={`hamim-path bg-white/40 w-full h-20 flex flex-row justify-between items-center rounded-xl
+      className={`hamim-path bg-black/70 w-full h-20 flex flex-row justify-between items-center rounded-xl
         ${position ? "sticky top-2 z-50" : "relative"}`}
     >
-      <div className=" flex w-1/3 m-5 ml-15 h-full justify-center items-center">
+      <div className=" flex w-auto m-5 ml-10 h-full justify-center items-center">
         <img
           src={Logo}
           alt="logo"
@@ -31,11 +32,11 @@ export default function Navbar() {
         />
       </div>
 
-      <ul className="flex flex-row justify-between items-center w-1/3 m-5 mr-20 text-purple-900 hamim-font text-2xl">
-        <li><a href="#about">Stalk Me</a></li>
-        <li><a href="#galery">Galery</a></li>
-        <li><a href="#expert">Expert</a></li>
-        <li><a href="#contact">Call Me</a></li>
+      <ul className="flex flex-row justify-between items-center w-1/3 m-5 mr-20 text-white-900 hamim-font text-2xl ">
+        <li><a href="#about" className="hover:text-purple-600"><DecryptedText  text="Profile"/></a></li>
+        <li><a href="#galery" className="hover:text-purple-600"><DecryptedText text="Galery"/></a></li>
+        <li><a href="#expert" className="hover:text-purple-600"><DecryptedText text="Expert"/></a></li>
+        <li><a href="#contact" className="hover:text-purple-600"><DecryptedText text="Call Me"/></a></li>
       </ul>
     </nav>
   );
