@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import Parent from "./Parent";
 import Main from "./hamimPages/Main";
 import Footer from "./hamimPages/Footer";
+import Back from "./components/Back.jsx"
 import Lenis from "lenis";
 
 
@@ -19,6 +20,7 @@ export default function HamimApp() {
   return (
     <div className="min-w-screen min-h-screen">
       <Parent>
+	<Back/>
         <Main/>
         <Footer/>
       </Parent>
