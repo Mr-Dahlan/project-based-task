@@ -1,90 +1,151 @@
+import fotoSaya from "./IMG/IMG_8428.JPG";
 export default function DitoApp() {
   const biodata = {
-    nama: "Hanindito Pratama Wicakasono",
+    nama: "Hanindito Pratama Wicaksono",
+    nim: "253140701111005",
+    kelas: "T2B",
     jurusan: "Teknologi Informasi",
-    universitas: "Universitas Brawijaya",
-    angkatan: "2025",
-    kota: "Jakata",
-    email: "ditopratama.2809@gmail.com",
+    lokasi: "DKI Jakarta",
+    foto: fotoSaya ,
   };
 
-  const skills = [
-    "HTML & CSS",
-    "JavaScript",
-    "React JS",
-    "Tailwind CSS",
-    "MySQL",
-    "Git & GitHub",
-  ];
-
-  const pengalaman = [
+  const tentangSaya = [
     {
-      tahun: "2025 – Sekarang",
-      judul: "Mahasiswa Aktif",
-      tempat: "Universitas Brawijaya",
-      keterangan: "Belajar pengembangan web dan juga membantu berkarya dengan cara sendiri",
+      label: "Hobi",
+      isi: "Saya senang menganalisa hal-hal random di sekitar saya — dari pola kebiasaan orang, tren teknologi, hingga hal-hal kecil yang sering luput dari perhatian. Bagi saya, menganalisa adalah cara menikmati dunia.",
     },
     {
-      tahun: "2025 - Sekarang",
-      judul: "Anggota UKM Provoks",
-      tempat: "Universitas Brawijaya",
-      keterangan: "Ikut belajar tentang pemograman dan perkembangaan teknologi",
+      label: "Kepribadian",
+      isi: "Saya adalah pribadi yang bertanggung jawab, ramah, dan sopan. Saya tidak terburu-buru dalam mengambil keputusan — setiap pilihan saya pertimbangkan dengan matang agar hasilnya tidak disesali.",
+    },
+    {
+      label: "Tujuan",
+      isi: "Ingin menjadi pribadi yang baik dan membanggakan kedua orang tua. Bagi saya, kesuksesan yang paling berarti adalah ketika orang-orang yang saya cintai bisa bangga melihat perjalanan saya.",
+    },
+    {
+      label: "Mengapa IT?",
+      isi: "Dunia IT menarik bagi saya karena penuh tantangan dan keunikan. Khususnya di bidang analisa IT — setiap masalah punya pola tersembunyi yang seru untuk ditemukan dan dipecahkan.",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-[#111111] text-gray-200 py-12 px-4">
-      <div className="max-w-2xl mx-auto space-y-10">
+    <div
+      className="min-h-screen py-12 px-4"
+      style={{ backgroundColor: "#0f172a", fontFamily: "Georgia, serif" }}
+    >
+      <div className="max-w-3xl mx-auto space-y-10">
 
-        {/* ── HEADER / BIODATA ── */}
-        <div className="border-b border-gray-700 pb-8">
-          <h1 className="text-3xl font-bold text-white mb-1">{biodata.nama}</h1>
-          <p className="text-gray-400 text-sm mb-4">
-            {biodata.jurusan} · {biodata.universitas} · Angkatan {biodata.angkatan}
-          </p>
-          <div className="flex flex-col gap-1 text-sm text-gray-400">
-            <span>📍 {biodata.kota}</span>
-            <span>📧 {biodata.email}</span>
-          </div>
+      
+        <div className="text-center">
+          <h1
+            className="text-2xl font-bold tracking-widest uppercase"
+            style={{ color: "#e2e8f0", letterSpacing: "0.2em" }}
+          >
+            Biografi
+          </h1>
+          <div
+            className="mx-auto mt-2 h-px w-24"
+            style={{ backgroundColor: "#7dd3fc" }}
+          />
         </div>
 
-        {/* ── SKILL ── */}
-        <div>
-          <h2 className="text-xs uppercase tracking-widest text-gray-500 mb-4 font-semibold">
-            Keahlian
-          </h2>
-          <div className="flex flex-wrap gap-2">
-            {skills.map((s) => (
-              <span
-                key={s}
-                className="bg-[#1e1e1e] border border-gray-700 text-gray-300 text-sm px-3 py-1 rounded"
+        <div className="flex flex-col md:flex-row gap-8 items-start">
+
+          
+          <div className="shrink-0">
+            <div
+              className="w-44 h-52 flex items-center justify-center text-sm"
+              style={{
+                border: "1px solid #7dd3fc",
+                backgroundColor: "#1e293b",
+                color: "#94a3b8",
+              }}
+            >
+              {biodata.foto ? (
+                <img
+                  src={biodata.foto}
+                  alt="Foto"
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <span></span>
+              )}
+            </div>
+          </div>
+
+        
+          <div className="flex-1 w-full">
+            {[
+              ["ID", biodata.nim],
+              ["NAME", biodata.nama],
+              ["CLASS", biodata.kelas],
+              ["MAJOR", biodata.jurusan],
+              ["LOCATION", biodata.lokasi],
+            ].map(([key, val]) => (
+              <div
+                key={key}
+                className="flex py-3"
+                style={{ borderBottom: "1px solid #1e3a5f" }}
               >
-                {s}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <div>
-          <h2 className="text-xs uppercase tracking-widest text-gray-500 mb-4 font-semibold">
-            Pengalaman
-          </h2>
-          <div className="space-y-6">
-            {pengalaman.map((p, i) => (
-              <div key={i} className="flex gap-4">
-                <div className="text-xs text-gray-500 w-28 shrink-0 pt-0.5">{p.tahun}</div>
-                <div>
-                  <p className="text-white font-medium">{p.judul}</p>
-                  <p className="text-gray-500 text-sm mb-1">{p.tempat}</p>
-                  <p className="text-gray-400 text-sm">{p.keterangan}</p>
-                </div>
+                <span
+                  className="w-32 text-sm font-semibold tracking-widest uppercase shrink-0"
+                  style={{ color: "#7dd3fc" }}
+                >
+                  {key}
+                </span>
+                <span className="text-sm" style={{ color: "#cbd5e1" }}>
+                  {val}
+                </span>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-6 text-center text-xs text-gray-600">
-          {biodata.nama} · {new Date().getFullYear()}
+        
+        <div>
+          <h2
+            className="text-center text-xl font-bold mb-1 tracking-wide"
+            style={{ color: "#e2e8f0" }}
+          >
+            Tentang Saya
+          </h2>
+          <div
+            className="mx-auto mb-6 h-px w-20"
+            style={{ backgroundColor: "#7dd3fc" }}
+          />
+
+          <div
+            className="p-6 space-y-5 text-sm leading-relaxed"
+            style={{
+              border: "1px solid #1e3a5f",
+              backgroundColor: "#0f1f35",
+              color: "#94a3b8",
+            }}
+          >
+            {tentangSaya.map((item) => (
+              <div key={item.label}>
+                <span
+                  className="font-semibold uppercase tracking-widest text-xs"
+                  style={{ color: "#7dd3fc" }}
+                >
+                  {item.label}
+                </span>
+                <p className="mt-1" style={{ color: "#cbd5e1" }}>
+                  {item.isi}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div
+          className="text-center text-xs pt-4"
+          style={{
+            borderTop: "1px solid #1e3a5f",
+            color: "#475569",
+          }}
+        >
+          {biodata.nama} · {biodata.nim}
         </div>
 
       </div>
