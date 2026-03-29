@@ -30,7 +30,7 @@ export default function DitoApp() {
 
   return (
     <div
-      className="min-h-screen py-12 px-4"
+      className="min-h-screen w-screen py-12 px-4"
       style={{ backgroundColor: "#0f172a", fontFamily: "Georgia, serif" }}
     >
       <div className="max-w-3xl mx-auto space-y-10">

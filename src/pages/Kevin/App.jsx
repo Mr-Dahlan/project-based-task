@@ -68,7 +68,7 @@ export default function App() {
   const { nama, kelas, jurusan, domisili, tentang, skills } = data
 
   return (
-    <div className="flex justify-center item-center min-h-screen bg-[#1e1e1e] py-12 px-4">
+    <div className="flex justify-center item-center min-h-screen w-screen bg-[#1e1e1e] py-12 px-4">
       <div className="justify-center item-center max-w-lg mx-auto flex flex-col gap-4">
 
         {}
